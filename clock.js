@@ -10,7 +10,11 @@ export class Clock {
   }
 
   toString() {
-    throw new Error('Remove this statement and implement this function');
+    let array = this.hour.toString().split()
+    console.log('array', array)
+    if(array.length < 2) {
+      return `0${this.hour}:${this.minute || '00'}`
+    }
   }
 
   plus() {
