@@ -6,11 +6,11 @@ describe('Clock', () => {
       expect(new Clock(8).toString()).toEqual('08:00');
     });
 
-    test('past the hour', () => {
+    xtest('past the hour', () => {
       expect(new Clock(11, 9).toString()).toEqual('11:09');
     });
 
-    test('midnight is zero hours', () => {
+    xtest('midnight is zero hours', () => {
       expect(new Clock(24, 0).toString()).toEqual('00:00');
     });
 

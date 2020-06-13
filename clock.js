@@ -11,9 +11,13 @@ export class Clock {
 
   toString() {
     let hourArray = this.hour.toString().split('');
+    let hour = hourArray.length < 2 ? `0${this.hour}` : this.hour.toString() || '00'
+
+    let minuteArray = this.minute ? this.minute.toString().split('') : '00'
+    let minute = minuteArray.length < 2 ? `0${this.minute}` : this.minute.toString() || '00'
     
-    
-    return hourArray.length < 2 ? `0${this.hour}:${this.minute || '00'}` : `${this.hour}:0${this.minute || '00'}`
+   
+    // return hourArray.length < 2 ? `0${this.hour}:${this.minute || '00'}` : `${this.hour}:0${this.minute || '00'}`
   }
 
   plus() {
