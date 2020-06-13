@@ -14,7 +14,7 @@ describe('Clock', () => {
       expect(new Clock(24, 0).toString()).toEqual('00:00');
     });
 
-    xtest('hour rolls over', () => {
+    test('hour rolls over', () => {
       expect(new Clock(25, 0).toString()).toEqual('01:00');
     });
 

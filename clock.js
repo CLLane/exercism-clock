@@ -19,6 +19,10 @@ export class Clock {
     if (hour === '24') {
       hour = '00'
     }
+    if (parseInt(hour) > 24) {
+      let newHour = parseInt(hour) - 24
+      hour = newHour.toString().split('').length < 2 ? `0${newHour}` : this.hour.toString() || '00'
+    }
    
     return `${hour}:${minute}`
   }
