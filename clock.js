@@ -16,6 +16,9 @@ export class Clock {
     let minuteArray = this.minute ? this.minute.toString().split('') : ['0','0']
     let minute = minuteArray.length < 2 ? `0${this.minute}` : minuteArray.join('')
     
+    if (hour === '24') {
+      hour = '00'
+    }
    
     return `${hour}:${minute}`
   }
