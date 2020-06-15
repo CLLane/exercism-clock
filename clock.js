@@ -29,7 +29,7 @@ export class Clock {
       }
      hour = hour.toString().split('').length < 2 ? `0${hour}` : this.hour.toString() || '00'
     }
-
+    if( parseInt(minute) > 60) {}
    
     return `${hour}:${minute}`
   }
