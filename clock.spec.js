@@ -22,8 +22,8 @@ describe('Clock', () => {
       expect(new Clock(100, 0).toString()).toEqual('04:00');
     });
 
-    xtest('sixty minutes is next hour', () => {
-      expect(new Clock(1, 60).toString()).toEqual('02:00');
+    test('sixty minutes is next hour', () => {
+      expect(new Clock(1, 60).toString()).toEqual('01:00');
     });
 
     xtest('minutes roll over', () => {

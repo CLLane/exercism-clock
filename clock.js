@@ -19,13 +19,17 @@ export class Clock {
     if (hour === '24') {
       hour = '00'
     }
-    
+    if (minute === '60') {
+      minute = '00'
+    }
+
     if (parseInt(hour) > 24) {
       while(parseInt(hour) > 24) {
         hour = parseInt(hour) - 24
       }
      hour = hour.toString().split('').length < 2 ? `0${hour}` : this.hour.toString() || '00'
     }
+
    
     return `${hour}:${minute}`
   }
