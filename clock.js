@@ -20,8 +20,10 @@ export class Clock {
       hour = '00'
     }
     if (parseInt(hour) > 24) {
-      let newHour = parseInt(hour) - 24
-      hour = newHour.toString().split('').length < 2 ? `0${newHour}` : this.hour.toString() || '00'
+      while(parseInt(hour) > 24) {
+        hour = parseInt(hour) - 24
+      }
+     hour = hour.toString().split('').length < 2 ? `0${hour}` : this.hour.toString() || '00'
     }
    
     return `${hour}:${minute}`
