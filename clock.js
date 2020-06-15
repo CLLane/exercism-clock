@@ -19,6 +19,7 @@ export class Clock {
     if (hour === '24') {
       hour = '00'
     }
+    
     if (parseInt(hour) > 24) {
       while(parseInt(hour) > 24) {
         hour = parseInt(hour) - 24
